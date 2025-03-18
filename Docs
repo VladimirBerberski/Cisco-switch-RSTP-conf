@@ -1,0 +1,6 @@
+# Cisco-switch-RSTP-conf
+
+Switch(config)# spanning-tree mode rapid-pvst
+Switch(config)# spanning-tree vlan 1 priority 4096   
+Switch(config-if)# spanning-tree portfast
+Switch(config-if)# spanning-tree bpduguard enable
