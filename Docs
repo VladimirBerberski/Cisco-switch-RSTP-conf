@@ -1,6 +1,17 @@
 # Cisco-switch-RSTP-conf
 
+Switch> enable
+Switch# configure terminal
 Switch(config)# spanning-tree mode rapid-pvst
-Switch(config)# spanning-tree vlan 1 priority 4096   
+Switch(config)# spanning-tree vlan 1 priority 4096
+Switch(config)# spanning-tree vlan 10 priority 4096
+Switch(config-if)# interface GigabitEthernet0/1
 Switch(config-if)# spanning-tree portfast
 Switch(config-if)# spanning-tree bpduguard enable
+Switch(config-if)# exit
+Switch(config-if)# interface GigabitEthernet0/2
+Switch(config-if)# spanning-tree link-type point-to-point
+Switch(config-if)# exit
+Switch# copy running-config startup-config
+
+
